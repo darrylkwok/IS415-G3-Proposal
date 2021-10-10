@@ -1,13 +1,12 @@
 ---
-title: "Welcome to IS415 G3 Proposal"
+title: "Regionalisation in Reach"
 description: |
-  Welcome to our new blog, IS415 G3 Proposal. We hope you enjoy 
-  reading what we have to say!
+  Hello! <span class="wave">👋</span> This is IS415 G3's Proposal Website. Our project theme is Analytical Regionalisation & Geographical Segmentation.
 author:
   - name: IS415 G3
-    url: https://example.com/norajones
-    affiliation: IS415 G3
-    affiliation_url: https://example.com/spacelysprokets
+    url: https://github.com/boiledcactus/IS415-G3
+    affiliation: School of Computing and Information Systems, Singapore Management University
+    affiliation_url: https://www.smu.edu.sg/
 date: 10-10-2021
 output:
   distill::distill_article:
@@ -15,13 +14,38 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      eval = TRUE,
+                      message = FALSE,
+                      warning = FALSE,
+                      fig.retina = 3)
 ```
 
-# Overview
+```{r}
+packages = c('devtools')
 
-## Problem & Motivation
+for (p in packages){
+  if(!require(p, character.only = T)){
+    install.packages(p)
+  }
+  library(p,character.only = T)
+}
+```
 
+```{r results="hide"}
+devtools::install_github("gadenbuie/xaringanExtra")
+library(xaringanExtra)
+```
+
+```{r panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+::::: {.panelset}
+::: {.panel}
+## Overview {.panel-name}
+
+### Problem & Motivation
 Comprehensive plans are required to set goals and guidelines for future growth and development. These plans are required to improve the welfare of the people and induce the creation of better social, economic and physical environments. Government bodies often create untargeted and uniform policies or strategies that hope to address the majority of the issues in the country. They often fail to consider the specific needs of each group that are across the country.
 
 With spatial information being affected by many factors, there could be many different factors why and how occurrences of events are clustered or segregated in certain locations. We attempt to create a generalised Geographical Segmentation tool to identify clusters within any datasets to perform in-depth analysis.
@@ -30,25 +54,26 @@ Geographic Segmentation divides and separates a target market into different seg
 
 If government policies are untargeted and irrelevant, it will be costly and damaging. Geographical segmentation is an effective approach for government bodies to identify the specific needs of each segment to better serve them.
 
-## Objectives
+### Objectives
 
 In this project, we will be creating a Geospatial Analytical Tool that will help users to unveil valuable insights by analyzing the spatial-temporal patterns of the different clusters of events within any datasets.
 
   - To visualize the distribution of the events
   - To identify clusters of events
   - To conduct Spatially Constrained Clustering Analysis and Segmentation
+  
+:::
+::: {.panel}
+## Data {.panel-name}
 
-# Data
+In order for our team to create and test the functionalities and effectiveness of our application, we will be using 2 datasets and will look to add on to this list nearing the completion of our project:
 
-In order for our team to create and test the functionalities and effectiveness of our application, we will be using 2 datasets and will look to add on to this list nearing the completion of our project.
-Airbnb Listings for June 2019 and 2020 in Singapore
-Downloaded from Inside Airbnb
-Childcare Centres in Singapore
-Downloaded from data.gov.sg
+- Airbnb Listings for June 2019 and 2020 in Singapore (Downloaded from Inside Airbnb)
+- Childcare Centres in Singapore (Downloaded from data.gov.sg)
 
-# Literature Review
-
-## Review #1
+:::
+::: {.panel}
+## Literature Review {.panel-name}
 
 ### Identifying High-risk Geographic Areas for Cardiac Arrest Using Three Methods for Cluster Analysis
 
@@ -65,8 +90,6 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
 #### Learning Points:
 
   - Pycnophylactic interpolation was used to estimate population counts for portions of census tracts lying within the Columbus city boundaries. This allows a smooth population density surface covering the study area. 
-
-## Review #2
 
 ### Spanish unemployment: Normative versus analytical regionalisation procedures*
 
@@ -110,9 +133,6 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
   - Normative Regionalisation may not always be appropriate due to some underlying factors
   - Analytical Regionalisation takes into account functional zones,  geographical contiguity, equality  and interaction between regions. 
 
-
-## Review #3
-
 ### Polygon-based Regionalisation in a GIS Environment
 
 #### Aim of Study: 
@@ -126,14 +146,14 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
     - History tracking
       - Each merged OTU is assigned a unique time stamp identification number in a separate table (history ID). As a result, the region-building sequence for all initial polygons = operational taxonomic units may be assessed and analyzed.
 
-
 ##### Example
 
    - **Building autonomous regions based on renewable energy consumption and sources**
     - The data is based on the combined effective production potential of renewable energy sources such as hydropower, wind, and photovoltaic energy, as well as biomass conversion and geothermal energy. After subtracting the power consumption per unit, a polygon layer represents the pooled energy supply potential.
     
-    
-# Approach
+:::
+::: {.panel}
+## Approach {.panel-name}
 
 ### Clustering: Local Moran’s I
 
@@ -185,9 +205,37 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
   - Computing spatially constrained clusters using SKATER method
   - Visualising the cluster in choropleth map
 
+:::
+::: {.panel}
+## Application Sytem {.panel-name}
+<center>
+![](images/app_system.png){width=90%}
+</center>
+  
+:::
+::: {.panel}
+## Application Storybaord {.panel-name}
+<center>
+![](images/About.png){width=90%}
+![](images/Data_Upload.png){width=90%}
+![](images/EDA.png){width=90%}
+![](images/Clustering.png){width=90%}
+![](images/Datasets.png){width=90%}
+</center>
+:::
+::: {.panel}
+## Timeline {.panel-name}
+<center>
+![](images/IS415_Gantt-1.png){width=90%}
+![](images/IS415_Gantt-2.png){width=90%}
+</center>
 
+For a clearer version, kindly open the image in a new tab, or [download our pdf](files/IS415_Gantt.pdf).
 
-# References
+*Acknowledgement: Created using [TeamGantt](https://www.teamgantt.com) template*
+:::
+::: {.panel}
+## References {.panel-name}
   - Sasson, C., Cudnik, M. T., Nassel, A., Semple, H., Magid, D. J., Sayre, M., Keseg, D., Haukoos, J. S., & Warden, C. R. (2012). Identifying high-risk geographic areas for cardiac arrest using three methods for cluster analysis. Academic Emergency Medicine, 19(2), 139–146. https://doi.org/10.1111/j.1553-2712.2011.01284.x 
 
   - Juan Carlos Duque & Raul Ramos Lobo & Manuel Artis Ortuno, 2004. "Spanish unemployment: Normative versus analytical regionalisation procedures," Working Papers in Economics 118, Universitat de Barcelona. Espai de Recerca en Economia. Retrieved from https://ideas.repec.org/p/bar/bedcje/2004118.html
@@ -196,11 +244,17 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
 
   - Grygorash, O., Zhou, Y., & Jorgensen, Z. (2006). Minimum spanning tree based clustering algorithms. 2006 18th IEEE International Conference on Tools with Artificial Intelligence (ICTAI'06). https://doi.org/10.1109/ictai.2006.83 
   
-  
-  
-  
-  
-  
-  
-  
-  
+:::
+::: {.panel}
+## Contact {.panel-name}
+
+Darryl Kwok Bing Heng: darryl.kwok.2018@scis.smu.edu.sg
+
+Megan Sim Tze Yen: megansim.2018@scis.smu.edu.sg
+
+Xu Pengtai: pengtai.xu.2021@exchange.smu.edu.sg
+
+Team Github: https://github.com/boiledcactus/IS415-G3
+
+:::
+:::::
