@@ -1,0 +1,5 @@
+---
+title: "IS415 G3 Proposal"
+site: distill::distill_website
+listing: posts
+---
