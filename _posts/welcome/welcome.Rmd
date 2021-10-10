@@ -4,7 +4,7 @@ description: |
   Hello! <span class="wave">👋</span> This is IS415 G3's Proposal Website. Our project theme is Analytical Regionalisation & Geographical Segmentation.
 author:
   - name: IS415 G3
-    url: https://github.com/boiledcactus/IS415-G3
+    url: https://github.com/darrylkwok/IS415-G3-Proposal
     affiliation: School of Computing and Information Systems, Singapore Management University
     affiliation_url: https://www.smu.edu.sg/
 date: 10-10-2021

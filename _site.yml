@@ -1,12 +1,15 @@
 name: "IS415-G3-Proposal"
 title: "IS415 G3 Proposal"
 description: |
-  IS415 G3 Proposal
+  Analytical Regionalisation and Geographical Segmentation
 output_dir: "_site"
+theme: theme.css
 navbar:
   right:
-    - text: "Home"
+    - icon: fa fa-home
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fa fa-github
+      href: https://github.com/darrylkwok/IS415-G3-Proposal
 output: distill::distill_article

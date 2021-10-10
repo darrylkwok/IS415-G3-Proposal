@@ -1,7 +1,7 @@
 ---
-title: "About this blog"
+title: "About Our Project"
 description: |
-  Some additional details about the blog
+  This project is for Prof. Kam's IS415 Geospatial Analytics & Applications module in Singapore Management University. Our Project Theme: Analytical Regionalisation & Geographical Segmentation
 ---
 
 ```{r setup, include=FALSE}
