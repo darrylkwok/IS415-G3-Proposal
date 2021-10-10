@@ -2385,6 +2385,8 @@ d-appendix d-footnote-list a.footnote-backlink {
   <script src="../../site_libs/header-attrs-2.10.6/header-attrs.js"></script>
   <link href="../../site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
   <script src="../../site_libs/panelset-0.2.6/panelset.js"></script>
+  <script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2474,10 +2476,49 @@ d-appendix d-footnote-list a.footnote-backlink {
 <section id="data" class="panel-name panel">
 <h2 class="panel-name">Data</h2>
 <p>In order for our team to create and test the functionalities and effectiveness of our application, we will be using 2 datasets and will look to add on to this list nearing the completion of our project:</p>
-<ul>
-<li>Airbnb Listings for June 2019 and 2020 in Singapore (Downloaded from Inside Airbnb)</li>
-<li>Childcare Centres in Singapore (Downloaded from data.gov.sg)</li>
-</ul>
+<div class="layout-chunk" data-layout="l-body">
+<table class=" lightable-material lightable-hover" style="font-family: &quot;Source Sans Pro&quot;, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-3">Table 1: </span>Datasets Used
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:left;">
+Source
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Childcare Centres
+</td>
+<td style="text-align:left;">
+<a href="https://data.gov.sg/dataset/child-care-services">data.gov.sg</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Singapore Airbnb Listings June 2019
+</td>
+<td style="text-align:left;">
+<a href="http://insideairbnb.com/get-the-data.html">Inside Airbnb</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Singapore Airbnb Listings Dec 2020
+</td>
+<td style="text-align:left;">
+<a href="http://insideairbnb.com/get-the-data.html">Inside Airbnb</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="literature-review" class="panel-name panel">
 <h2 class="panel-name">Literature Review</h2>
@@ -2634,6 +2675,8 @@ d-appendix d-footnote-list a.footnote-backlink {
 <center>
 <img src="images/app_system.png" style="width:90.0%" />
 </center>
+<p>The application system to be used involves backend, hosting and frontend tools. For backend, the project is supported by R, RStudio and R Shiny; hosting tools used are netlify and R Shiny; for frontend, the project deploys blogdown and netlify to render the application developed. Users can access the application using any browser of their choice.</p>
+<p>The Geospatial Analytical Tool created enables users to analyze the spatial-temporal patterns of the different clusters of events within any datasets. It handles the analysis process end-to-end: from data import, data wrangling, data overview and in-depth regionalisation analysis. For regionalisation analysis specifically, it allows users to utilise general clustering methods such as hierarchical clustering and k-means clustering. At the same time, user-defined features are provides (eg. specification on the number of clusters/regions). Overall, the tool aims to be a one-stop solution for regionalisation analysis.</p>
 </section>
 <section id="application-storybaord" class="panel-name panel">
 <h2 class="panel-name">Application Storybaord</h2>

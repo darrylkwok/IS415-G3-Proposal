@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE,
 ```
 
 ```{r}
-packages = c('devtools')
+packages = c('devtools', 'kableExtra')
 
 for (p in packages){
   if(!require(p, character.only = T)){
@@ -68,8 +68,25 @@ In this project, we will be creating a Geospatial Analytical Tool that will help
 
 In order for our team to create and test the functionalities and effectiveness of our application, we will be using 2 datasets and will look to add on to this list nearing the completion of our project:
 
-- Airbnb Listings for June 2019 and 2020 in Singapore (Downloaded from Inside Airbnb)
-- Childcare Centres in Singapore (Downloaded from data.gov.sg)
+```{r}
+datasets <- data.frame(
+  Name=c("Childcare Centres",
+         "Singapore Airbnb Listings June 2019",
+         "Singapore Airbnb Listings Dec 2020"),
+  Source=c("[data.gov.sg](https://data.gov.sg/dataset/child-care-services)",
+           "[Inside Airbnb](http://insideairbnb.com/get-the-data.html)",
+           "[Inside Airbnb](http://insideairbnb.com/get-the-data.html)")
+  )
+
+# with reference to this guide on kableExtra:
+# https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+# kable_material is the name of the kable theme
+# 'hover' for to highlight row when hovering, 'scale_down' to adjust table to fit page width
+library(knitr)
+library(kableExtra)
+kable(datasets, caption="Datasets Used") %>%
+  kable_material("hover", latex_options="scale_down")
+```
 
 :::
 ::: {.panel}
@@ -211,7 +228,10 @@ Employs a spatial scan statistic to draw circles of varying magnitude, which are
 <center>
 ![](images/app_system.png){width=90%}
 </center>
-  
+The application system to be used involves backend, hosting and frontend tools. For backend, the project is supported by R, RStudio and R Shiny; hosting tools used are netlify and R Shiny; for frontend, the project deploys blogdown and netlify to render the application developed. Users can access the application using any browser of their choice.
+
+The Geospatial Analytical Tool created enables users to analyze the spatial-temporal patterns of the different clusters of events within any datasets. It handles the analysis process end-to-end: from data import, data wrangling, data overview and in-depth regionalisation analysis. For regionalisation analysis specifically, it allows users to utilise general clustering methods such as hierarchical clustering and k-means clustering. At the same time, user-defined features are provides (eg. specification on the number of clusters/regions).  Overall, the tool aims to be a one-stop solution for regionalisation analysis. 
+
 :::
 ::: {.panel}
 ## Application Storybaord {.panel-name}
