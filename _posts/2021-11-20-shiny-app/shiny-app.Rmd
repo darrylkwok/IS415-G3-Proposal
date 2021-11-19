@@ -1,0 +1,20 @@
+---
+title: "Shiny App"
+description: |
+  Shiny Application for Regionalisation Tool.
+author:
+  - name: IS415 G3
+    url: https://github.com/darrylkwok/IS415-G3-Proposal
+date: 2021-11-20
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+You can view our Shiny application [here](https://prototype-shiny-darryl.shinyapps.io/shiny_app/_w_dbf7aad8/#!/).
+

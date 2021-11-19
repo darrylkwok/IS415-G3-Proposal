@@ -1,0 +1,20 @@
+---
+title: "Research Paper"
+description: |
+  A short description of the post.
+author:
+  - name: IS415 G3
+    url: https://github.com/darrylkwok/IS415-G3-Proposal
+date: 2021-11-20
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Our research paper can be found through [this link](https://github.com/darrylkwok/IS415_G3-app/blob/main/G3_Research_Paper/G3_Research_Paper.pdf).
+
