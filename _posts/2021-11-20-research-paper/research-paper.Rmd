@@ -1,7 +1,7 @@
 ---
 title: "Research Paper"
 description: |
-  A short description of the post.
+   Our Research Paper.
 author:
   - name: IS415 G3
     url: https://github.com/darrylkwok/IS415-G3-Proposal
